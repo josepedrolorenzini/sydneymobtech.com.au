@@ -3,7 +3,7 @@
 <head>
      <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sydney Mobile Technician | Under Construction</title>
+  <title>Sydney Mobile Technician</title>
   <meta name="description" content="Sydney Mobile Technician - Your trusted Sydney Mobile Technicians. We provide on-the-spot car repairs and maintenance services across Sydney. Contact us today!">
   <meta name="keywords" content="Sydney Mobile Technician, Sydney Mobile Technicians, mobile car repair Sydney, car servicing Sydney, mobile Technician near me">
   <meta name="author" content="Sydney Mobile Technician">
