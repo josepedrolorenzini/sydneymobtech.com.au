@@ -12,6 +12,8 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
         document.getElementById('background')?.classList.add('!hidden');
     };
 
+    console.log(this + " " +  'hello world')
+
     return (
         <>
             <Head title="Welcome" />
