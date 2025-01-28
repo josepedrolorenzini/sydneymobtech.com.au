@@ -45,7 +45,8 @@
 <body>
     <div class="container">
         <h1 class="mb-4 text-4xl font-bold">Sydney Mobile Technician</h1>
-        <p class="mb-2 text-lg">Your trusted <strong>Sydney Mobile Technicians</strong>. We provide on-the-spot car repairs and maintenance services across Sydney.</p>
+        <p class="mb-2 text-lg">Your trusted <strong>Sydney Mobile Technicians</strong>.</p>
+        <p class="mb-2 text-lg">We provide on-the-spot car repairs and maintenance services across Sydney.</p>
         <p class="mb-2 text-lg">Our website is currently under construction.</p>
         <p class="mb-2 text-lg">We’ll be live soon to serve you better!</p>
         <p class="mb-2 text-lg">For inquiries, please contact us:</p>
