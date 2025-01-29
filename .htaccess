@@ -1,16 +1,23 @@
-# To prevent access to .env and other files
-<Files .*>
-# Apache 2.2
-<IfModule !mod_authz_core.c>
-Order deny,allow
-Deny from all
-</IfModule>
-# Apache 2.4
-<IfModule mod_authz_core.c>
-Require all denied
-</IfModule>
-</Files>
+# Prevent access to hidden files like .env
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
 
-<IfModule mod_alias.c>
-RedirectMatch 301 ^/$ http://sydneymobtech.com.au/public
+# Ensure mod_rewrite is enabled
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirect all requests to public/index.php
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+
+    # Handle Laravel pretty URLs
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ public/index.php [QSA,L]
 </IfModule>
+
+# Deny access to .env and other sensitive files
+<FilesMatch "\.(env|htaccess|ini|log|phpunit.xml|yml)$">
+    Require all denied
+</FilesMatch>
