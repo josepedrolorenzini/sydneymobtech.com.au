@@ -64,3 +64,31 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+Summary of Different Ways to Use usePage() in react inertia js
+Feature	Code Example
+Get page data	const { props } = usePage();
+Get current path	const { url } = usePage();
+Get component name	const { component } = usePage();
+Get shared data	const { props } = usePage(); const { auth } = props;
+Conditional rendering based on path	{url === '/dashboard' && <p>Welcome!</p>}
+
+
+
+Scenario	How to Access
+Public folder (/public/img/example.jpg)	<img src="/img/example.jpg" />
+Laravel asset helper	asset('img/example.jpg')
+Passed from Laravel to React	usePage().props.imagePath
+Background Image (CSS)	background-image: url('/img/example.jpg');
+Storage folder (storage/app/public)	<img src="/storage/example.jpg" />
+Would you like help with image uploads or dynamic storage? 🚀
+
+Use Case	Method
+Directly access public files	/img/logo.png
+Laravel asset helper (Blade)	{{ asset('img/logo.png') }}
+Laravel asset helper (React)	asset('img/logo.png') in usePage().props
+Background image in CSS	background-image: url('/img/logo.png');
+Get absolute path in Laravel	public_path('img/logo.png')
+Access files from storage/app/public	/storage/logo.png (after php artisan storage:link)

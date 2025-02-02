@@ -20,5 +20,10 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
             'password' => bcrypt('password'),
         ]);
+
+        //seeder database
+        $this->call([
+            ServiceSeeder::class,
+        ]);
     }
 }

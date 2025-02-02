@@ -46,6 +46,12 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                 ) : (
                                     <>
                                         <Link
+                                            href={route('home')}
+                                            className="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                                        >
+                                            Home
+                                        </Link>
+                                        <Link
                                             href={route('login')}
                                             className="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
                                         >
@@ -63,8 +69,8 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                         </header>
 
                         <main className="mt-6">
-                            <div className="flex items-center justify-center min-h-screen bg-gray-100">
-                                <div className="container p-6 mx-auto text-center bg-white shadow-lg rounded-lg">
+                            <div className="flex items-center justify-center min-h-screen bg-gray-900">
+                                <div className="container p-6 mx-auto text-center  shadow-lg rounded-lg">
                                     <h1 className="mb-4 text-4xl font-bold">Sydney Mobile Technician</h1>
                                     <p className="mb-2 text-lg">Your trusted <strong>Sydney Mobile Technicians</strong>.
                                         We provide on-the-spot car repairs and maintenance services across Sydney.</p>
