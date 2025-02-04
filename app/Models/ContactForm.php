@@ -2,18 +2,20 @@
 
 namespace App\Models;
 
-
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use \Illuminate\Http\Request;
 
-class Service extends Model
+class ContactForm extends Model
 {
     //
-    use HasFactory;
-
+    use HasFactory ; 
     protected $fillable = [
-        'name', 
-        'description', 
-        'price'
-    ];
+        'name',
+        'email',
+        'phone',
+        'message',
+    ] ;
+
+
 }

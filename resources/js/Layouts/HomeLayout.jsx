@@ -16,7 +16,7 @@ const navigation = [
     { name: 'About us', href: '/about', current: false },
     { name: 'Services', href: '#', current: false },
     { name: 'Gallery', href: '#', current: false },
-    { name: 'Contact us', href: '#', current: false },
+    { name: 'Contact us', href: '/contact', current: false },
 ]
 const userNavigation = [
     { name: 'Your Profile', href: '#' },
@@ -56,7 +56,7 @@ export default function HomeLayout({children , bannerImage}) {
                             <div className="flex items-center">
                                 <div className="shrink-0">
                                     <img
-                                        alt="Your Company"
+                                        alt="Sydney Mobile Technician"
                                         src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
                                         className="size-8"
                                     />
@@ -187,7 +187,11 @@ export default function HomeLayout({children , bannerImage}) {
                     {/* <div className="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
                         <h1 className="text-3xl font-bold tracking-tight text-gray-900">{usePageData.component}</h1>
                     </div> */}
-                    <HomeBanners url={bannerImage} />
+                    
+                {/* BANNER SLIDERS */}
+                   { bannerImage &&  <HomeBanners url={bannerImage} /> }
+                 {/* BANNER SLIDERS */}
+                 
                 </header>
 
                 <main>

@@ -1,5 +1,13 @@
 import { Link } from '@inertiajs/react';
-import React from 'react';
+
+
+const navigation = [
+    { name: 'Home', href: '/home', current: true },
+    { name: 'About us', href: '/about', current: false },
+    { name: 'Services', href: '#', current: false },
+    { name: 'Gallery', href: '#', current: false },
+    { name: 'Contact us', href: '#', current: false },
+]
 
 function Footer() {
   return (
@@ -9,11 +17,10 @@ function Footer() {
           <div className="mb-4 md:w-3/4 md:mb-0">
             <nav className="mb-4">
               <ul className="flex flex-wrap space-x-4">
-                <li><Link href="/" className="hover:underline">Home</Link></li>
-                <li><Link href="/nosotros" className="hover:underline">Nosotros</Link></li>
-                <li><Link href="/quehacemos" className="hover:underline">Que hacemos</Link></li>
-                <li><Link href="/portfolio" className="hover:underline">Portafolio</Link></li>
-                <li><Link href="/contacto" className="hover:underline">Contacto</Link></li>
+                {navigation.map(footerMenu => {
+                    
+               return <li><Link href="/" className="'text-gray-300 hover:bg-gray-700 hover:text-white p-1">{footerMenu.name}</Link></li>
+                })}
               </ul>
             </nav>
             <ul className="space-y-1">
@@ -26,7 +33,7 @@ function Footer() {
             </ul>
           </div>
           <div className="text-center md:w-1/4 md:text-right">
-            <span className="font-bold">Encuéntranos</span>
+            <span className="font-bold">Follow us:</span>
             <ul className="mt-2">
               <li>
                 <Link href="https://github.com/josepedrolorenzini" className="hover:underline">

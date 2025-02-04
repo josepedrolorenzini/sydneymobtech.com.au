@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Service;
 use Illuminate\Foundation\Application;
@@ -37,11 +38,28 @@ Route::get("/home" , function(){
 
 
 Route::get('/about', function(){
+    
+    $services = new Service() ;
+    $allServices = $services->all() ;
 
     $bannerImage = asset('./img/Website-Banner-Photo-scaled.jpg');
+
     return Inertia::render('AboutUs' , [
-        'bannerImage' => $bannerImage
+        'bannerImage' => $bannerImage , 
+        'allServices' => $allServices,
     ]);
 })->name("about");
+
+
+// contact form routes
+Route::get("/contact" ,[ ContactFormController::class , 'index'])->name("contact.index");
+Route::post("/contact" ,[ ContactFormController::class , 'contactFormSubmit'] )->name('contact.submitted') ;
+
+// Route::get("/contact" , function(){
+//     return Inertia::render('ContactUs');
+// })->name("contact");
+
+// contact form routes
+
 
 require __DIR__.'/auth.php';

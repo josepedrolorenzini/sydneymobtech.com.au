@@ -15,7 +15,7 @@ class ServiceController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'servicename' => 'required|string|max:255',
+            'description' => 'required|string|max:255',
             'price' => 'required|numeric|min:0',
         ]);
 
