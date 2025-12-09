@@ -22,3 +22,6 @@ yarn-error.log
 /.vscode
 /.zed
 texttutorial.md
+./config/app.php
+./config/database.php
+php.ini
