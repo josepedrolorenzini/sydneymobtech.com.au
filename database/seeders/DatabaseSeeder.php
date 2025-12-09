@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         User::factory()->create([
+<<<<<<< HEAD
             'name' => 'Admin',
             'email' => 'admin@sydneymobtech.com.au',
             'password' => bcrypt('password'),
@@ -24,6 +25,10 @@ class DatabaseSeeder extends Seeder
         //seeder database
         $this->call([
             ServiceSeeder::class,
+=======
+            'name' => 'Test User',
+            'email' => 'test@example.com',
+>>>>>>> master
         ]);
     }
 }

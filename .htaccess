@@ -14,10 +14,18 @@
     # Handle Laravel pretty URLs
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
+<<<<<<< HEAD
     RewriteRule ^ public/index.php [QSA,L]
+=======
+    RewriteRule ^ index.php [QSA,L]
+>>>>>>> master
 </IfModule>
 
 # Deny access to .env and other sensitive files
 <FilesMatch "\.(env|htaccess|ini|log|phpunit.xml|yml)$">
     Require all denied
+<<<<<<< HEAD
 </FilesMatch>
+=======
+</FilesMatch>
+>>>>>>> master

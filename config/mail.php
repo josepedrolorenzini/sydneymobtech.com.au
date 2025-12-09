@@ -109,8 +109,13 @@ return [
     */
 
     'from' => [
+<<<<<<< HEAD
         'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
         'name' => env('MAIL_FROM_NAME', 'Example'),
+=======
+        'address' => env('MAIL_FROM_ADDRESS', 'info@sydneymobtech.com.au'),
+        'name' => env('MAIL_FROM_NAME', 'sydney mobile tech'),
+>>>>>>> master
     ],
 
 ];

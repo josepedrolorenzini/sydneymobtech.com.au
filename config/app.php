@@ -52,7 +52,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'url' => env('APP_URL', 'http://sydneymobtech.com.au'),
+=======
+    'url' => env('APP_URL', 'https://sydneymobtech.com.au'),
+>>>>>>> master
 
     /*
     |--------------------------------------------------------------------------
@@ -97,7 +101,11 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+<<<<<<< HEAD
     'key' => env('APP_KEY', 'base64:dmZuMm5qZjkyZ2FkOGxoNHpleG91OWZmajRydnZzcGg='),
+=======
+    'key' => env('APP_KEY', 'base64:OWYwdHg2MDNsMHBlcmdqMHBwOGkzdndvaXR0eXVhdDQ='),
+>>>>>>> master
 
     'previous_keys' => [
         ...array_filter(
